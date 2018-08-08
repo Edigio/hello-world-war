@@ -15,6 +15,8 @@ node {
 
             sh 'mvn clean install'
         }
+
+    stage 'docker build'
     
     
 }

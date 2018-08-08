@@ -17,7 +17,6 @@ node {
         }
 
     stage 'docker build'
-     sh "which hello-world-war-1.0.0.war"
      sh "docker build -t egidio/hellowar ."
     
 }

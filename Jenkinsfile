@@ -10,7 +10,7 @@ node {
         maven: 'M3',
         // Maven settings.xml file defined with the Jenkins Config File Provider Plugin
         // Maven settings and global settings can also be defined in Jenkins Global Tools Configuration
-        mavenSettingsConfig: 'MyGlobalSettings',
+        mavenSettingsConfig: '70e340f6-df1e-4d0d-b016-6dda52da3282',
         mavenLocalRepo: '.repository') {
 
             sh 'mvn clean install'

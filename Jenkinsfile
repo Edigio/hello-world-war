@@ -7,7 +7,6 @@ node {
     sh "git rev-parse --short HEAD > commit-id
 
     stage 'build'
-
-        sh 'mvn clean install'
+    sh 'mvn clean install'
     
 }

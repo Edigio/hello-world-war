@@ -17,6 +17,6 @@ node {
         }
 
     stage 'docker build'
-     sh "docker build -t egidio/hellowar -f . dist"
+     sh "docker build -t egidio/hellowar"
     
 }

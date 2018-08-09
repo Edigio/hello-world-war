@@ -25,6 +25,10 @@ node {
 
     stage 'push'
         sh 'docker push 127.0.0.1:30400/hellowar'
+
+
+    stage 'deploy'
+        sh 'kubectl apply -f -'
         
     
 }

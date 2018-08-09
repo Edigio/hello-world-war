@@ -16,11 +16,11 @@ node {
             sh 'mvn clean install'
         }
 
+
     stage 'docker build'
     sh 'ls'
     sh 'cp /root/.jenkins/workspace/java-test-cicd/.repository/com/efsavage/hello-world-war/1.0.0/hello-world-war-1.0.0.war .'
-    ws ('com/efsavage/hello-world-war/1.0.0') {
-        sh "docker build -t egidio/hellowar ."
-    }
+    sh "docker build -t egidio/hellowar ."
+    
     
 }

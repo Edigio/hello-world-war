@@ -4,7 +4,7 @@ node {
 
     env.DOCKER_API_VERSION="1.23"
     
-    stage 'build'
+    stage 'maven build'
     withMaven(
         // Maven installation declared in the Jenkins "Global Tool Configuration"
         maven: 'M3',
@@ -14,8 +14,9 @@ node {
         mavenLocalRepo: '.repository') {
 
             sh 'mvn clean install'
-            sh "docker build -t egidio/hellowar ."
         }
 
+    stage 'docker build'
+    sh "docker build -t egidio/hellowar . -v /root/.jenkins/workspace/java-test-cicd/.repository/com/efsavage/hello-world-war/1.0.0"
     
 }

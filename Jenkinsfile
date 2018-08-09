@@ -17,7 +17,7 @@ node {
         }
 
     stage 'docker build'
-    ws ('/root/.jenkins/workspace/java-test-cicd') {
+    ws ('/root/.jenkins/workspace/java-test-cicd/') {
         sh "docker build -t egidio/hellowar ."
     }
     

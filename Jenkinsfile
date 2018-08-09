@@ -20,11 +20,11 @@ node {
     stage 'docker build'
         sh 'ls'
         sh 'cp /root/.jenkins/workspace/java-test-cicd/.repository/com/efsavage/hello-world-war/1.0.0/hello-world-war-1.0.0.war .'
-        sh "docker build -t egidio/hellowar ."
+        sh "docker build -t 127.0.0.1:30400/hellowar ."
 
 
     stage 'push'
-        sh 'docker push egidio/hellowar'
+        sh 'docker push 127.0.0.1:30400/hellowar'
         
     
 }

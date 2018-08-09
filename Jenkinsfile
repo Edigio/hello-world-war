@@ -17,6 +17,7 @@ node {
         }
 
     stage 'docker build'
+    sh 'cp Dockerfile com/efsavage/hello-world-war/1.0.0'
     ws ('com/efsavage/hello-world-war/1.0.0') {
         sh "docker build -t egidio/hellowar ."
     }

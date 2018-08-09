@@ -14,9 +14,8 @@ node {
         mavenLocalRepo: '.repository') {
 
             sh 'mvn clean install'
+            sh "docker build -t egidio/hellowar ."
         }
 
-    stage 'docker build'
-     sh "docker build -t egidio/hellowar ."
     
 }

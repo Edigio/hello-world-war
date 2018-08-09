@@ -17,7 +17,7 @@ node {
         }
 
     stage 'docker build'
-    ws ('/root/.jenkins/workspace/java-test-cicd/') {
+    ws ('com/efsavage/hello-world-war/1.0.0') {
         sh "docker build -t egidio/hellowar ."
     }
     
